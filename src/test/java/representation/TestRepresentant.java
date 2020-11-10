@@ -9,6 +9,7 @@ public class TestRepresentant {
 	// Quelques constantes
 	private static final float FIXE_BASTIDE = 1000f;
 	private static final float INDEMNITE_OCCITANIE = 200f;
+        private static final String Adresse = "Rue du Pauvre";
 	
 	private Representant r; // L'objet à tester
 	private ZoneGeographique occitanie;
@@ -83,5 +84,37 @@ public class TestRepresentant {
 
 	}
 	
-	
+	@Test 
+        public void testBonNumero () {
+            assertEquals(36,r.getNumero(),"Le numero n'est pas bon");
+        }
+        
+        @Test 
+        public void testBonNom () {
+            assertEquals("Bastide",r.getNom(),"Le nom n'est pas bon");
+        }
+        
+        @Test 
+        public void testBonPrenom () {
+            assertEquals("Rémi",r.getPrenom(),"Le prenom n'est pas bon");
+        }
+        
+        @Test 
+        public void testBonneAdresse () {
+            assertEquals("Rue du Pauvre",r.getAdresse(),"L'adresse n'est pas bonne");
+        }
+        
+        @Test 
+        public void testBonSalaireFixe () {
+            assertEquals(1000f ,r.getSalaireFixe(),"Le salaire fixe n'est pas bon");
+        }
+        
+        @Test 
+        public void testBonSecteur () {
+            assertEquals(occitanie,r.getSecteur(),"Le secteur n'est pas bon");
+        }
+        
+
+        
+        
 }
