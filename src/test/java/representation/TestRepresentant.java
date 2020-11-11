@@ -114,7 +114,20 @@ public class TestRepresentant {
             assertEquals(occitanie,r.getSecteur(),"Le secteur n'est pas bon");
         }
         
-
-        
-        
-}
+         @Test
+         public void TestNoNegativeMonth () {
+            try { 
+                  r.enregistrerCA (-1,1200000f);
+                 fail("Un mois négatif doit générer une exception");
+             }  catch (IllegalArgumentException e) {}
+            }
+         
+         @Test
+         public void TestNoMoreThan11ForMonth () {
+             try {
+                 r.enregistrerCA (12, 20000f);
+                 fail ("Un mois supérieur à 11 doit générer une exception");
+             } catch (IllegalArgumentException e) {}
+         }
+   }
+ 

@@ -8,7 +8,7 @@ public class Representant {
 	private String adresse;
 	private float salaireFixe;
         private ZoneGeographique secteur ;
-        private float [] EnregistrerCAMensuel= new float [12]; //creation d'un tableau de 12 cases
+        private final float [] EnregistrerCAMensuel= new float [12]; //creation d'un tableau de 12 cases
         
 	public Representant(int numero, String nom, String prenom, ZoneGeographique secteur) {
 		this.numero = numero;
